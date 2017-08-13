@@ -1,0 +1,27 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: sans-serif;
+}
+
+textarea {
+    height: 60px;
+    width: 100%;
+}
+
+button {
+    margin: 5px 0 10px 0;
+    width: 100px;
+    padding: 3px;
+}
+
+.comment {
+    font-style: italic;
+    margin: 10px 0;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
